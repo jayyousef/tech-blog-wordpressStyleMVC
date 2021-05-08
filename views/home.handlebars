@@ -1,0 +1,86 @@
+<div class="menu-container rounded light col-md-10">
+  <div class="card-header">
+    <h2 class="play-font centerd-text">
+      &#9709 LATEST NEWS &#9710
+    </h2>
+
+    {{#each blogs as |blog|}}
+    <div class="card">
+      <div class="dish">
+        {{!-- col-md-5 --}}
+        <h1>
+          {{blog.title}}
+        </h1>
+        <p>
+        {{blog.user.user_name}}
+        </p> 
+      </div>
+      <div class="col-md-7">
+        <p>
+          {{blog.body}}
+        </p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+<!-- This is the form for adding a new dish -->
+{{#if loggedIn}}
+
+<div class="add-dish-container col-md-2 aside">
+  <h2>
+    Add a new post here!
+  </h2>
+  <form class="new-dish-form">
+    <label for="dish_name">
+      Post Title:
+    </label>
+    <br />
+    <textarea placeholder="Post Title" id="post-title" name="dish_name" rows="2" cols="30">
+
+    </textarea>
+    <br />
+    <label for="description">
+      Body:
+    </label>
+    <br />
+    <textarea placeholder="Type Your Post Body Here" id="post-body" name="description" rows="5" cols="30">
+ 
+    </textarea>
+  
+    <button type="submit" value="Submit">
+      Submit
+    </button>
+  </form>
+
+{{!-- {{else}}
+
+<div class="login-body">
+  <h2>
+    Log in here!
+  </h2>
+  <form class="new-dish-form">
+    <label for="dish_name">
+      E-mail
+    </label>
+    <br />
+    <textarea id="dish_name" name="dish_name" rows="2" cols="30">
+      dish_name
+    </textarea>
+    <br />
+    <label for="description">
+      Password:
+    </label>
+    <br />
+    <textarea id="description" name="description" rows="5" cols="30">
+      description
+    </textarea>
+    <button type="submit" value="Submit">
+      Submit
+    </button>
+  </form>
+</div>  --}}
+
+{{/if}}
+</div>
+<script src="/js/add-dish.js"></script>

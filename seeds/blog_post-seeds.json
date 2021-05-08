@@ -1,0 +1,38 @@
+[
+  {
+    "title": "French Bread with Brie Cheese",
+    "body": "French baguette with warm brie",
+    "user_id": 1
+  },
+  {
+    "title": "Cheese Plate with Spanish Chorizo",
+    "body":
+      "Manchego, Iberico, Cabrales, fig jam, grapes, pecans, and Spanich Chorizo",
+    "user_id": 1
+  },
+  {
+    "title": "Fish Tacos",
+    "body":
+      "Battered/fried fish, corn tortillas, fresh slaw with jalepenos and cilantro, pickled red onion",
+    "user_id": 1
+
+  },
+  {
+    "title": "Tropical Fruit Salad",
+    "body": "Guava, papaya, pineapple, mango, and star fruit",
+    "user_id": 2
+  },
+  {
+    "title": "Pork Gyoza",
+    "body":
+      "Homemade japanese dumplings stuffed with a pork and green onion filling, served with peanut dipping sauce",
+    "user_id": 3
+  },
+  {
+    "title": "Yebeg Tibs with Injera Bread",
+    "body":
+      "Marinated lamb dish with rosemary, garlic, onion, tomato, jalapeño and the East African spice berbere",
+    "user_id": 4
+  }
+]
+
