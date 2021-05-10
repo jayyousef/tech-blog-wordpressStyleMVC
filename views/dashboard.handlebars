@@ -4,9 +4,9 @@
 <hr>
 
 {{!-- Displays all the users posts in cards --}}
-<div class="posts mt-3 mb-5 d-flex align-items-center justify-content-center" style="max-width: 100%;"></div>
+<div class="posts">
 {{#each blog_posts as |posts|}}
-
+<div class=" mt-3 mb-5 d-flex align-items-center justify-content-center" style="max-width: 100%;">
     <div class="card p-2 radial-bg" style="">
         <div class="">
             <div class="">
@@ -25,10 +25,10 @@
         </button>
         </div>
     </div>
+</div>
 
 {{/each}}
 </div>
-
 {{!-- button to create a new post --}}
 <div class="mt-1 mb-3 d-flex align-items-center justify-content-center">
     <button id="new-post" class="btn btn-info center" type="button" name="action">Create a New Post</button>
