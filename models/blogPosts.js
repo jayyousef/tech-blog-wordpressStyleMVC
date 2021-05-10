@@ -14,12 +14,17 @@ BlogPost.init({
         autoIncrement: true,
     },
     title: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(50),
         allowNull: false,
     },
     body: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(3000),
         allowNull: false,
+    },
+    edited: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
     },
     user_id: {
         type: DataTypes.INTEGER,

@@ -1,37 +1,35 @@
 [
   {
-    "title": "French Bread with Brie Cheese",
-    "body": "French baguette with warm brie",
+    "title": "Best Pinocchio quotes",
+    "body": "Always let your conscience be your guide...These words were spoken by the Blue Fairy as an instruction to Pinocchio that came along with him being transformed into a living puppet and began his quest to become a real boy. Jiminy Cricket gets drafted into surface as Pinocchio's conscience, and remarkably, for a homeless insect, he’s well-suited to the job. It’s a good lesson for all of us to take to heart, even if we’re not always that great about following it.",
     "user_id": 1
   },
   {
-    "title": "Cheese Plate with Spanish Chorizo",
-    "body":
-      "Manchego, Iberico, Cabrales, fig jam, grapes, pecans, and Spanich Chorizo",
+    "title": "best quotes from Finding Nemo",
+    "body":"Just keep swimming...Dory is one of those Disney characters that you can’t help but love simply because she is so unabashedly optimistic. She deals with a pretty severe disability, but she never lets it get her down. Instead, she focuses on the future and simply repeats her mantra, “just keep swimming.” It’s something to keep in mind when you come up against any obstacle. Sometimes you just have to put your head down and keep moving forward.",
     "user_id": 1
   },
   {
-    "title": "Fish Tacos",
-    "body":
-      "Battered/fried fish, corn tortillas, fresh slaw with jalepenos and cilantro, pickled red onion",
+    "title": "best quotes from Peter Pan",
+    "body":    "Think happy thoughts ... In order to learn to fly, you need to think happy thoughts. In Peter Pan it allows you to literally fly through the air. Unfortunately, in real life happy thoughts won’t let you actually fly, but they will help you feel like you could. Maybe thinking about Peter Pan is your actual thought, maybe it’s something more real, but we should all think happy thoughts as often as possible.",
     "user_id": 1
 
   },
   {
-    "title": "Tropical Fruit Salad",
-    "body": "Guava, papaya, pineapple, mango, and star fruit",
+    "title": "Quotes from Mulan",
+    "body": "The flower that blooms in adversity is the most rare and beautiful of all. The Emperor of China has been around the block a few times and so he knows the lesson Li Shang needs to learn when he very nearly lets Mulan go without letting her know how he feels. So often we all feel that the difficulties we deal with weaken us, but this quote reminds us that we’re all actually stronger because of it.",
     "user_id": 2
   },
   {
-    "title": "Pork Gyoza",
+    "title": "Quotes From Lion King",
     "body":
-      "Homemade japanese dumplings stuffed with a pork and green onion filling, served with peanut dipping sauce",
+      "Oh yes, the past can hurt. But the way I see it, you can either run from it or learn from it...As much as we might love the song “Hakuna Matata,” The Lion King is very clear that the tune’s message about forgetting the past is the wrong way to go about things. As Rafiki tells us, the past is there for each of us to learn from. This line is what drives Simba to face his past after so many years away.",
     "user_id": 3
   },
   {
-    "title": "Yebeg Tibs with Injera Bread",
+    "title": "Quotes from incredibles",
     "body":
-      "Marinated lamb dish with rosemary, garlic, onion, tomato, jalapeño and the East African spice berbere",
+      "I never look back, darling! It distracts from the now. Of course, Edna Mode might not necessarily agree with Rafiki, but that doesn’t make her any less fun or her quotable lines any less memorable. Edna is the most quotable of the entire Incredibles franchise and this is probably the line that we all think of when we think of her.",
     "user_id": 4
   }
 ]

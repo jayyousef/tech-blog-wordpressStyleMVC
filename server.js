@@ -2,7 +2,9 @@ const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
 const session = require('express-session')
+const routes = require('./controllers');
 const helpers = require('./utils/helpers')
+
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -10,11 +12,14 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+//set up handlebars.js engine with custom helpers
+const hbs = exphbs.create({helpers});
+
 //set up sessions
 const sess = {
   //secret used to sign the session ID cookie (string or array)
   secret: 'Super secret secret',
-  cookie: {},
+  cookie: {maxAge:86400000},
   //if true, forces the session to be saved back ot the session store
   resave: false,
   //if true saving login sessions
@@ -22,21 +27,19 @@ const sess = {
   store: new SequelizeStore({db: sequelize})
 };
 
-
-
-const hbs = exphbs.create({helpers});
 app.use(session(sess));
 
+//inform express.js which template engine to use
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({
-  extended: false
+  extended: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(require('./controllers/'));
+app.use(routes);
 
 sequelize.sync({
   force: false

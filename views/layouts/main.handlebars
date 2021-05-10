@@ -1,34 +1,49 @@
 <head>
   <meta charset="UTF-8">
-  <title>{{ title }}</title>
+  <title>Tech Blog</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
 
 
 </head>
 
+
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between flex-end align-center p-2">
-      <h1 class="play-font">
-        &#9641 TECH NEWS &#9641
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <a class="play-font" href="/">&#9641 TECH NEWS &#9641
+        </a>
       </h1>
-      <div>
-        <a href="/" class="button">Home</a>
-        <a href="/profile" class="button">Your Profile</a>
-        {{#if loggedIn}}
-        <a href="/logout" class="button">Logout</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <button class="no-button" id="logout">logout</button>
         {{else}}
-        <a href="/login" class="button">Login</a>
-
+        <a href="/login">login</a>
         {{/if}}
-      </div>
+      </nav>
     </header>
-    <main class="container container-fluid mt-5 text-primary">
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
       {{{ body }}}
     </main>
+    <footer>
+
+    </footer>
   </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="../js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>

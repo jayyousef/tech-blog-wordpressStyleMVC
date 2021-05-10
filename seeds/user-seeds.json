@@ -1,44 +1,44 @@
 [
   {
-    "user_name": "Brie1",
+    "user_name": "Mickey Mouse",
     "email": "test1@testing.com",
-    "password": "longerpassword",
+    "password": "testpassword1",
     "blog_post_id": 1
   },
   {
-    "user_name": "Cheese2",
+    "user_name": "Genie of Aladdin",
     "email": "test2@testing.com",
-    "password": "passwordtest",
+    "password": "testpassword2",
     "blog_post_id": 2
   },
   {
-    "user_name": "Bread3",
+    "user_name": "donald duck",
     "email": "test3@testing.com",
-    "password": "testingpassword",
+    "password": "testpassword3",
     "blog_post_id": 3
   },
   {
-    "user_name": "French4",
+    "user_name": "Sebastian",
     "email": "test4@testing.com",
-    "password": "testpassword",
+    "password": "testpassword4",
     "blog_post_id": 4
   },
   {
-    "user_name": "testuser5",
+    "user_name": "Simba",
     "email": "test5@testing.com",
-    "password": "testpassword2",
+    "password": "testpassword5",
     "blog_post_id": null
   },
   {
-    "user_name": "testUser6",
+    "user_name": "cruella devil",
     "email": "test6@testing.com",
-    "password": "testingtesting",
+    "password": "testpassword6",
     "blog_post_id": null
   },
   {
-    "user_name": "testUser7",
+    "user_name": "timon & pumba",
     "email": "test7@testing.com",
-    "password": "testthepassword",
+    "password": "testpassword7",
     "blog_post_id": null
   }
 ]

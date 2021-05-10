@@ -1,0 +1,72 @@
+{{#if logged_in}}
+<h5 class="center-align">Welcome {{user_name}}! {{{get_emoji }}}<span class='joke-text'> </span></h5>
+
+<hr>
+
+<button id="new-post" class="btn" type="button" name="action"><i class="bi bi-plus"></i>Create a New Post</button>
+
+<div id="new-post-div" style="display: none;" class="card">
+{{#if logged_in}}
+<div class="row">
+  <form class="col s10 center-align">
+    <h5 class="center-align">Create a new post here!</h5>
+    <div class="row">
+      <div class="input-field col s10">
+        <input placeholder="Your Post Title" id="post_name" type="text">
+        <label for="post_name"></label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea id="post_text" class="materialize-textarea" placeholder="Your Post Body Here--Better to remain silent and be thought a fool than to speak out and remove all doubt."></textarea>
+        <label for="post_text">       
+        </label>
+      </div>
+    </div>
+    <button class="btn waves-effect waves-light center-align" id="submit-btn" type="submit" name="action">
+        <i class="material-icons right">Submit</i>
+    </button>
+  </form>
+</div>
+
+{{else}}
+<h5 class="center-align">You must be <a href="/login">logged in</a> (and have your towel) to make a post.</h5>
+{{/if}}
+
+
+
+</div>
+
+<div class="posts-container">
+    {{#each blog_posts as |posts|}}
+    <div class="row">
+        <div class="col s12 m8 offset-m2 center-align">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <h2><a href="/posts/{{posts.id}}"> <span class="card-title">{{posts.title}} {{#if edited}} (edited)
+                                {{/if}}</span></a></h2>
+                    <p>{{posts.body}}</p>
+                </div>
+                <div class="card-action">
+                    <p>Created on {{format_date posts.createdAt}}</p>
+                </div>
+            </div>
+            <button data-edit-id="{{posts.id}}" class="btn" type="button" name="action">Edit
+                <i class="material-icons right"></i>
+            </button>
+            <button data-delete-id="{{posts.id}}" class="btn" type="button" name="action">Delete
+                <i class="material-icons right"></i>
+            </button>
+        </div>
+    </div>
+
+    {{/each}}
+</div>
+{{else}}
+
+<h6 class="center-align">You must be <a href="/login">logged in</a> to view the dashboard.</h6>
+
+{{/if}}
+
+
+<script src="./js/dashboard.js"></script>
