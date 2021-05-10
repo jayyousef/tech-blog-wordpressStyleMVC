@@ -1,37 +1,57 @@
 <div class="mt-3 mb-5 d-flex align-items-center justify-content-center">
     <div class="">
-        <div  class="card p-2" style="width: 50rem;">
+        <div class="card p-2" style="max-width: 80%;">
             <div>
-                <h2 class='color4'><span class="card-title">{{title}}
-                        {{#if edited}} <span class="edited">(edited)</span>
+                <h2 class='color5 pl-2'><span class="card-title">{{title}}
+                        {{#if edited}} <span class="font-italic h4 text-muted edited">(edited)</span>
                         {{/if}}</span></a>
                 </h2>
-                <hr>
-                <p>{{body}}</p>
-                <hr>
 
-            <div class="">
-                <p>{{user.user_name}} on {{format_date createdAt}}</p>
-            </div>
+                <div class="h6 pl-4">
+                    <p>{{user.user_name}} on {{format_date createdAt}}</p>
+                </div>
+                <hr>
+                <p class="m-2">{{body}}</p>
+
             </div>
 
+            {{#each Comments as |comment|}}
+
+            <div class="bg-light border rounded mt-3">
+                <div class="m-2">
+                    <h6 class=''><span class="">{{comment.user.user_name}}</span>--<span
+                            style="font-style: italic;">{{format_date comment.createdAt}}</span>
+                    </h6>
+
+                    <div>
+                        <p>{{body}}</p>
+                    </div>
+                </div>
+            </div>
+
+            {{/each}}
+
+            <div class="mt-4">
+                <form class="">
+                    <div class="">
+
+                        {{#if logged_in}}
+                        <div class="">
+                            <textarea id="comment-text" class="form-group form-control form-control-lg"
+                                placeholder="Write a comment here!"></textarea>
+                            <label for="comment-text"></label>
+                        </div>
+                    </div>
+                    <div class="d-grid ">
+                        <button id="submit-btn" class="btn btn-primary" type="submit">Comment
+                        </button>
+                    </div>
+                    {{/if}}
+                </form>
+            </div>
 
         </div>
     </div>
 </div>
 
-{{!-- <div class="row">
-    <form class="col s12">
-        <div class="row">
-
-            {{#if logged_in}}
-            <div class="input-field col s12">
-                <textarea id="comment-text" class=""></textarea>
-                <label for="comment-text">Add a comment!</label>
-            </div>
-        </div>
-        <button id="submit-btn" class="button" type="submit">Comment
-        </button>
-        {{/if}}
-</form>
-</div> --}}
+<script src="../js/comment.js"></script>

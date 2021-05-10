@@ -6,7 +6,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 
 </head>
 
@@ -38,7 +38,10 @@
       <!-- Render the sub layout of each handlebars template -->
       {{{ body }}}
     </main>
-    <footer class="mt-5 page-footer font-small bg-color5 pt-4">
+
+    {{!-- footer starts here --}}
+
+    <footer class="mt-5 page-footer font-small bg-color5 pt-4 ">
       <div class="container-fluid text-center ">
         <div class="row">
           <div class="pl-5 text-left col-md-6 mt-md-0 mt-3">
@@ -56,7 +59,7 @@
                 <a class="btn btn-light" href="/">Home</a>
               </li>
               <li>
-                <a class="btn btn-light" href="#!">Dashboard</a>
+                <a class="btn btn-light" href="/dashboard">Dashboard</a>
               </li>
               {{#if logged_in}}
               <li>

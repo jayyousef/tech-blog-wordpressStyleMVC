@@ -52,18 +52,19 @@ router.get('/posts/:id', async (req, res) => {
         }
       ],
     });
-
+console.log(blogPostData)
     if (!blogPostData) {
-      res.status(404).json({
-        message: 'No Post Found!'
-      });
+      res.render('404', {layout: 'other'})
+      // .json({
+        // message: "No post found! Try again"
+      // })
       return;
     }
     const post = blogPostData.get({
       plain: true
     });
+    console.log(post)
     res.render('post', {
-      // title: post.title,
       ...post,
       logged_in: req.session.logged_in
     });
@@ -117,7 +118,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
       ...user,
       logged_in: true
     });
-
+    console.log(user);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -142,6 +143,7 @@ router.get('/edit-post/:id', withAuth, async (req, res) => {
       ...post,
       logged_in: req.session.logged_in
     })
+
   } catch (err) {
     res.status(500).json(err)
   }

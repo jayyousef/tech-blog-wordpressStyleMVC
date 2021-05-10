@@ -39,6 +39,7 @@ const newPost = async (event) => {
   const newPostDiv = document.getElementById("new-post-div");
   if (newPostDiv.style.display === "none") {
     newPostDiv.style.display = "block";
+    newPostDiv.style.transition = "all .25s ease-in-out";
   } else {
     newPostDiv.style.display = "none";
   }
@@ -97,10 +98,10 @@ const getJoke = () => {
 }
 
 const jokeText = document.querySelector('.joke-text');
+
 getJoke();
 
-
-document.querySelector('.posts-container').addEventListener('click', postHandler)
+document.querySelector('#posts-container').addEventListener('click', postHandler)
 
 document.querySelector('#new-post').addEventListener('click', newPost)
 

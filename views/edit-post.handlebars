@@ -1,17 +1,19 @@
-<div class="row">
-  <form class="col s10 center-align">
-    <h5 class="center-align">"Edit your post here!"</h5>
-    <div class="row">
-      <div class="input-field col s10">
-        <input id="post_name" type="text" data-length="100" value="{{title}}">
-      </div>
+<div class="posts-container mt-3 mb-5 d-flex align-items-center justify-content-center">
+  <form class="form-group card">
+    <h2 class="m-4 text-center">Edit your post here!</h2>
+
+    <div class="mb-4 justify-content-center d-flex align-items-center justify-content-center">
+        <input id="post_name" type="text" class="form-control form-control-md" value="{{title}}">
     </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <textarea id="post_text" class="materialize-textarea" data-length="5000">{{body}}</textarea>
-      </div>
+
+    <div class="d-flex align-items-center justify-content-center">
+
+        <textarea id="post_text" class="form-control form-control-md" >{{body}}</textarea>
+
+
     </div>
-    <button class="btn waves-effect waves-light center-align" id="submit-btn" type="submit" name="action">Update post!
+
+    <button class="btn btn-primary m-5" id="submit-btn" type="submit" name="action">Update post!
     </button>
   </form>
 </div>
