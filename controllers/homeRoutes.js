@@ -130,8 +130,9 @@ router.get('/dashboard', withAuth, async (req, res) => {
 // edit page from dashboard upon click edit button
 router.get('/edit-post/:id', withAuth, async (req, res) => {
   try {
-    const postData = await Posts.findByPk(req.params.id)
-
+    console.log("testing")
+    const postData = await BlogPost.findByPk(req.params.id)
+    console.log('>>>>post Data',postData)
     if (!postData) {
       res.status(404).json({
         message: "No post found! Try again"

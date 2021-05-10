@@ -1,5 +1,3 @@
-const { post } = require("../../controllers/homeRoutes");
-
 async function editPostHandler(event) {
     event.preventDefault();
     // set variables for database columns
@@ -8,7 +6,7 @@ async function editPostHandler(event) {
     const url = window.location.pathname;
     const id = url.substring(url.lastIndexOf('/') + 1);
   
-    const response = await fetch(`/api/posts/${id}`, {
+    const response = await fetch(`/api/post/${id}`, {
       method: 'PUT',
       body: JSON.stringify({
         title: postTitle,
@@ -20,7 +18,7 @@ async function editPostHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace(`/post/${id}`);
+      document.location.replace(`/posts/${id}`);
     } else {
       alert(response.statusText);
     }

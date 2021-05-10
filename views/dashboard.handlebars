@@ -6,32 +6,33 @@
 <button id="new-post" class="btn" type="button" name="action"><i class="bi bi-plus"></i>Create a New Post</button>
 
 <div id="new-post-div" style="display: none;" class="card">
-{{#if logged_in}}
-<div class="row">
-  <form class="col s10 center-align">
-    <h5 class="center-align">Create a new post here!</h5>
+    {{#if logged_in}}
     <div class="row">
-      <div class="input-field col s10">
-        <input placeholder="Your Post Title" id="post_name" type="text">
-        <label for="post_name"></label>
-      </div>
+        <form class="col s10 center-align">
+            <h5 class="center-align">Create a new post here!</h5>
+            <div class="row">
+                <div class="input-field col s10">
+                    <input placeholder="Your Post Title" id="post_name" type="text">
+                    <label for="post_name"></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="post_text" class="materialize-textarea"
+                        placeholder="Your Post Body Here--Better to remain silent and be thought a fool than to speak out and remove all doubt."></textarea>
+                    <label for="post_text">
+                    </label>
+                </div>
+            </div>
+            <button class="btn waves-effect waves-light center-align" id="submit-btn" type="submit" name="action">
+                <i class="material-icons right">Submit</i>
+            </button>
+        </form>
     </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <textarea id="post_text" class="materialize-textarea" placeholder="Your Post Body Here--Better to remain silent and be thought a fool than to speak out and remove all doubt."></textarea>
-        <label for="post_text">       
-        </label>
-      </div>
-    </div>
-    <button class="btn waves-effect waves-light center-align" id="submit-btn" type="submit" name="action">
-        <i class="material-icons right">Submit</i>
-    </button>
-  </form>
-</div>
 
-{{else}}
-<h5 class="center-align">You must be <a href="/login">logged in</a> (and have your towel) to make a post.</h5>
-{{/if}}
+    {{else}}
+    <h5 class="center-align">You must be <a href="/login">logged in</a> (and have your towel) to make a post.</h5>
+    {{/if}}
 
 
 

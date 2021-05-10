@@ -28,7 +28,9 @@ const deletePost = async (event) => {
 
 // use dataset to get id for post and load edit-post page
 const editPost = async (event) => {
+
   const id = event.target.getAttribute('data-edit-id');
+  console.log(id)
   window.location.replace(`/edit-post/${id}`)
 }
 
