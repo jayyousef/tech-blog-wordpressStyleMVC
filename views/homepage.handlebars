@@ -1,20 +1,18 @@
-      &#9709 LATEST NEWS &#9710
+      <h2 class="text-center text-light m-4">&#9709 LATEST NEWS &#9710</h2>
 <!-- Loop over each object in the projects array -->
 {{#each blogs as |post| }}
-<div class="row mb-4 project">
-  <div class="card col-md-5">
+{{!-- main div --}}
+<div class="mt-3 mb-5 d-flex align-items-center justify-content-center">
+  {{!-- main card --}}
+  <div class="card p-2" style="width: 50rem;">
     <h2>
-      <a href="/posts/{{id}}">{{title}}</a>
+      <a class="color4" href="/posts/{{id}}">{{title}}</a>
     </h2>
     <hr>
     <p>{{body}}</p>
     <hr>
     <p>Created by {{user.user_name}} on {{format_date createdAt}}</p>
   </div>
-  <div class="col-md-7">
-    <p>
-      {{post.description}}
-    </p>
-  </div>
+
 </div>
 {{/each}}

@@ -10,13 +10,58 @@
 }
 
 
-.edited{
-color: black ;
-font-size: 1rem ;
-font-style: italic;
+
+.containerz {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  width: 100%;
 }
 
-.button {
+.full-nav{
+  max-width: 100%;
+}
+
+.bg-color5{
+  background-color: #379683;
+}
+
+.color1 {
+  color: #8EE4AF;
+}
+
+.color2 {
+  color: #edf5e1;
+}
+
+.color3 {
+  color: #5cdb95;
+}
+
+.color4 {
+  color: #907163;
+}
+
+.color5 {
+  color: #379683;
+}
+
+.color6 {
+  color: #1f1f1f;
+}
+
+
+
+
+
+.edited {
+  color: black;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* .button {
   transition-duration: 0.3s;
   color: darkblue;
   padding: 1rem;
@@ -29,6 +74,6 @@ font-style: italic;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 } */
 
-.login-body{
+.login-body {
   height: 0.5vh
 }

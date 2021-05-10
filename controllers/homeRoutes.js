@@ -22,7 +22,6 @@ router.get('/', async (req, res) => {
     const blogs = blogPosts.map((BlogPost) => BlogPost.get({
       plain: true
     }));
-    console.log('this is blogs >>>>>>>>>>', blogs)
 
 
     res.render('homepage', {
@@ -60,12 +59,9 @@ router.get('/posts/:id', async (req, res) => {
       });
       return;
     }
-
     const post = blogPostData.get({
       plain: true
     });
-
-    console.log(post.Comments)
     res.render('post', {
       // title: post.title,
       ...post,
@@ -116,7 +112,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     const user = userData.get({
       plain: true
     });
-    console.log(user)
+
     res.render('dashboard', {
       ...user,
       logged_in: true
@@ -130,20 +126,18 @@ router.get('/dashboard', withAuth, async (req, res) => {
 // edit page from dashboard upon click edit button
 router.get('/edit-post/:id', withAuth, async (req, res) => {
   try {
-    console.log("testing")
     const postData = await BlogPost.findByPk(req.params.id)
-    console.log('>>>>post Data',postData)
     if (!postData) {
-      res.status(404).json({
-        message: "No post found! Try again"
-      })
+      res.render('404', {layout: 'other'})
+      // .json({
+        // message: "No post found! Try again"
+      // })
       return;
     }
 
     const post = postData.get({
       plain: true
     });
-    console.log(post)
     res.render('edit-post', {
       ...post,
       logged_in: req.session.logged_in

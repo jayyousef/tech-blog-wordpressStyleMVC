@@ -6,37 +6,74 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/style.css">
-
-
+  <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
+{{!-- full page --}}
 
-<body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <a class="play-font" href="/">&#9641 TECH NEWS &#9641
-        </a>
-      </h1>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/dashboard">Dashboard</a>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
+<body style="background-color: #2c2c2c;">
+  <div class="">
+    {{!-- header bar --}}
+    <div class="container-fluid bg-color5">
+      <header class="navbar">
+        <h1>
+          <a class="play-font text-light" href="/">&#9641 TECH NEWS &#9641
+          </a>
+        </h1>
+        <nav>
+          <a class="btn btn-light" href="/">Home</a>
+          <a class="btn btn-light" href="/dashboard">Dashboard</a>
+          <!-- Conditionally render login or logout links -->
+          {{#if logged_in}}
+          <button class="btn btn-light" id="logout">logout</button>
+          {{else}}
+          <a class="btn btn-light" href="/login">login</a>
+          {{/if}}
+        </nav>
+      </header>
+    </div>
+
+    <main class="container">
+      <!-- Render the sub layout of each handlebars template -->
       {{{ body }}}
     </main>
-    <footer>
+    <footer class="mt-5 page-footer font-small bg-color5 pt-4">
+      <div class="container-fluid text-center ">
+        <div class="row">
+          <div class="pl-5 text-left col-md-6 mt-md-0 mt-3">
+            <h5 class="text-uppercase font-weight-bold">Thanks for visiting</h5>
+            <p>This website would be nothing without your constant support and your donations which regularly come
+              pouring in. You make this site special and the content you provide makes this a better space each day.
+              Thanks for being awesome!</p>
+          </div>
+          <hr class="clearfix w-100 d-md-none pb-3">
+          <div class="text-left ml-6 col-md-6 mb-md-0 mb-3">
 
+            <h5 class="text-uppercase font-weight-bold">Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a class="btn btn-light" href="/">Home</a>
+              </li>
+              <li>
+                <a class="btn btn-light" href="#!">Dashboard</a>
+              </li>
+              {{#if logged_in}}
+              <li>
+                <button class="btn btn-light" id="logout">logout</button>
+                {{else}}
+              <li>
+                <a class="btn btn-light" href="/login">login</a>
+                {{/if}}
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright text-center py-3">© 2021 Copyright:
+        <a class="text-light" href="https://github.com/jayyousef"> FullStackFlex</a>
+      </div>
     </footer>
   </div>
 
