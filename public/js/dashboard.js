@@ -101,7 +101,7 @@ const jokeText = document.querySelector('.joke-text');
 
 getJoke();
 
-document.querySelector('#posts-container').addEventListener('click', postHandler)
+document.querySelector('.posts').addEventListener('click', postHandler)
 
 document.querySelector('#new-post').addEventListener('click', newPost)
 

@@ -5,7 +5,7 @@
 {{!-- Displays all the users posts in cards --}}
 
 {{#each blog_posts as |posts|}}
-<div id="posts-container" class="mt-3 mb-5 d-flex align-items-center justify-content-center" style="max-width: 100%;">
+<div class=" mt-3 mb-5 d-flex align-items-center justify-content-center" style="max-width: 100%;">
     <div class="card p-2 radial-bg" style="">
         <div class="">
             <div class="">
@@ -17,10 +17,12 @@
                 <p>Created on {{format_date posts.createdAt}}</p>
             </div>
         </div>
+        <div class="posts">
         <button data-edit-id="{{posts.id}}" class="btn btn-info" type="button" name="action">Edit
         </button>
         <button data-delete-id="{{posts.id}}" class="btn btn-danger" type="button" name="action">Delete
         </button>
+        </div>
     </div>
 </div>
 
