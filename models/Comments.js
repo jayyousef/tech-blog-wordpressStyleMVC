@@ -36,4 +36,6 @@ Comments.init({
   modelName: 'Comments',
 });
 
+console.log('is this in heroku')
+
 module.exports = Comments;
