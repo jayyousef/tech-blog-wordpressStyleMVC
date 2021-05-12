@@ -1,10 +1,10 @@
 {
-  "name": "TechBlogCMS",
+  "name": "Tech Blog",
   "version": "1.1.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start":"node server.js",
+    "start": "node server.js",
     "seeds": "node seeds/index.js"
   },
   "author": "",
