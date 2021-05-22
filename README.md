@@ -1,9 +1,9 @@
 # tech-blog-wordpressStyleMVC
 This wordpress style blog setup allows individual login, creating/deleting/updating posts to the back end and storing sessions for 24 hours maximum.
 
-![[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![[[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![Link to depolyed application](https://whispering-tundra-70670.herokuapp.com/)
+[Link to depolyed application](https://whispering-tundra-70670.herokuapp.com/)
 
 
 ## Table of contents
