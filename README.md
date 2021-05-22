@@ -3,9 +3,7 @@ This wordpress style blog setup allows individual login, creating/deleting/updat
 
 ![[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-![https://whispering-tundra-70670.herokuapp.com/]]([])
-
-<a href="https://whispering-tundra-70670.herokuapp.com/">![Tech Blog Screenshot](tech-blog-screenshot.png)</a>
+![Link to depolyed application](https://whispering-tundra-70670.herokuapp.com/)
 
 
 ## Table of contents
