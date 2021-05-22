@@ -3,7 +3,7 @@ This wordpress style blog setup allows individual login, creating/deleting/updat
 
 ![[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-[![ Link to Deployed Application]](https://whispering-tundra-70670.herokuapp.com/){:target="_blank"})
+[![Bower.io: A Frontend Package Manager. logo][https://whispering-tundra-70670.herokuapp.com/]]([tech-blog-screenshot.png])
 
 
 ## Table of contents
