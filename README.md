@@ -5,6 +5,7 @@ This wordpress style blog setup allows individual login, creating/deleting/updat
 
 [Link to depolyed application](https://whispering-tundra-70670.herokuapp.com/)
 
+![Screenshot of application](/public/tech-blog-screenshot.png)
 
 ## Table of contents
 1. [Introduction](#introduction)
