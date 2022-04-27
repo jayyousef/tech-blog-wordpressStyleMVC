@@ -1,4 +1,4 @@
-# tech-blog-wordpressStyleMVC
+# tech-blog-wordpressStyleMVC 
 This wordpress style blog setup allows individual login, creating/deleting/updating posts to the back end and storing sessions for 24 hours maximum.
 
 ![[[License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
